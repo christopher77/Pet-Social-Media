@@ -21,11 +21,8 @@ const Post = (props) => {
 	// const coments
 	const likes = props.dato.likes;
 
-	console.log(publishDate);
 	const [showModal, setShowModal] = React.useState(false);
 	const [postLiked, setPostLiked] = React.useState(false);
-
-	console.log("props=>", props.dato.owner.firstName);
 
 	const openModal = () => {
 		setShowModal(true);
