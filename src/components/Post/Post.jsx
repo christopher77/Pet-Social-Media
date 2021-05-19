@@ -1,6 +1,7 @@
 import React from "react";
 import "./Post.scss";
-import like from "../../images/heart-solid.svg";
+import likeCheck from "../../images/heart-solid.svg";
+import like from "../../images/heart-regular.svg";
 import comment from "../../images/comment.svg";
 import link from "../../images/link.svg";
 import Modal from "../Modal/Modal";
@@ -20,7 +21,9 @@ const Post = (props) => {
 	// const coments
 	const likes = props.dato.likes;
 
+	console.log(publishDate);
 	const [showModal, setShowModal] = React.useState(false);
+	const [postLiked, setPostLiked] = React.useState(false);
 
 	console.log("props=>", props.dato.owner.firstName);
 
@@ -32,6 +35,10 @@ const Post = (props) => {
 		setShowModal(false);
 	};
 
+	const changeLike = () => {
+		setPostLiked(!postLiked);
+	};
+
 	return (
 		<div className="container">
 			<div className="owner" onClick={() => openModal()}>
@@ -39,7 +46,12 @@ const Post = (props) => {
 			</div>
 			<img className="image" src={petImage} alt="foto mascota" />
 			<div className="main">
-				<img clasName="main__like" src={like} alt="like" />
+				<img
+					clasName="main__like"
+					src={postLiked ? likeCheck : like}
+					alt="like"
+					onClick={() => changeLike()}
+				/>
 				<img clasName="main__comments" src={comment} alt="comments" />
 				{links && <img clasName="main__link" src={link} />}
 			</div>
