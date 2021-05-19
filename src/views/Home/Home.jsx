@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PostList from "../../components/PostList/PostList";
-
+import "./Home.scss";
 const BASE_URL = "https://dummyapi.io/data/api";
 const APP_ID = "60a555eb48e7e45fc7562a40";
 
@@ -27,7 +27,9 @@ const Home = () => {
 		setLoading(false);
 	};
 
-	return <div>{data && <PostList data={data} />}</div>;
+	return (
+		<div className="home__container">{data && <PostList data={data} />}</div>
+	);
 };
 
 export default Home;

@@ -1,0 +1,14 @@
+.lista {
+	margin: 0 auto;
+	width: 45%;
+	// text-align: center;
+
+	&__title {
+		height: 10vh;
+		font-size: 6vh;
+		padding: 1rem;
+		color: #955f20;
+		background-color: #fff;
+		border-radius: 30px;
+	}
+}

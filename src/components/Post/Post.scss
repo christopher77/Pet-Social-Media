@@ -1,0 +1,50 @@
+.container {
+	background-color: #fff;
+	margin: 0 auto;
+	padding: 2rem;
+	font-size: 2vh;
+}
+
+.owner {
+	font-size: 3vh;
+}
+.image {
+	width: 100%;
+	height: 40vh;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	border-radius: 30px;
+}
+
+.main {
+	display: flex;
+	height: 2vh;
+	& > * {
+		margin-right: 1vw;
+		cursor: pointer;
+	}
+	&__like {
+	}
+
+	&__comments {
+	}
+
+	&__links {
+	}
+}
+
+.hashtags {
+	display: flex;
+	color: #955f20;
+}
+
+.description {
+}
+
+.date {
+}
+.links {
+}
+
+.likes {
+}
